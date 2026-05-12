@@ -53,8 +53,8 @@ export function Hero() {
             <a href="#overview">
               <Button variant="primary">View details</Button>
             </a>
-            <a href="/Survey_Report_for_LONGSHANKS.pdf" download>
-              <Button variant="ghost">Download survey</Button>
+            <a href="#survey">
+              <Button variant="ghost">Get the survey</Button>
             </a>
             <a
               href="https://knot10.com/profile/keith-maresca/"

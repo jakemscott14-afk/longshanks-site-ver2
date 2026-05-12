@@ -5,7 +5,7 @@ export const meta = {
   name: 'Longshanks',
   hull: '319',
   hailingPort: 'Newport, RI',
-  location: 'Beaufort, SC',
+  location: 'Charleston, SC',
   price: '$86,600',
   tagline: "Built in '72. Reborn in '04. Cared for ever since.",
 };
@@ -32,13 +32,13 @@ export const highlights = [
   },
   {
     icon: 'Layers',
-    title: 'Hand-laid FRP hull',
+    title: 'Hand-laid FRP hull w/ full 2004 epoxy bottom',
     body: "Solid fiberglass construction from Hatteras's legendary New Bern yard.",
   },
   {
     icon: 'Radar',
-    title: 'New Furuno radar',
-    body: 'Navnet VX2 25 kW 6\' open-array system, still in the box, ready to install.',
+    title: 'Updated electronics package',
+    body: '72-mile radar with chart overlay, 10" Garmin chart plotter, Furuno autopilot, and more.',
   },
   {
     icon: 'Wrench',
@@ -48,50 +48,25 @@ export const highlights = [
   {
     icon: 'Anchor',
     title: 'Ready to cruise',
-    body: "Suitable for coastal cruising and fishing per surveyor's summary.",
+    body: 'Having traveled from Maine to the Dry Tortugas, Longshanks is suitable for extended coastal cruising, fishing, and scuba diving.',
   },
 ];
 
 export const specs = [
   {
-    group: 'Vessel',
+    group: '',
     rows: [
-      { label: 'Year / Make / Model', value: '1972 Hatteras 42 Convertible' },
-      { label: 'Builder', value: 'Hatteras Yachts, New Bern, NC' },
-      { label: 'Hull number', value: '319' },
-      { label: 'Hailing port', value: 'Newport, RI' },
-      { label: 'LOA', value: "42' 8\"" },
-      { label: 'Beam', value: "13' 10\"" },
-      { label: 'Draft', value: "3' 5\"" },
-      { label: 'Displacement', value: '31,000 lbs' },
-      { label: 'Overhead clearance', value: "19' 8\"" },
-      { label: 'Hull material', value: 'Hand-laid FRP' },
-      { label: 'Hull type', value: 'Modified-V, planing, moderate deadrise' },
-    ],
-  },
-  {
-    group: 'Propulsion',
-    rows: [
-      { label: 'Engines', value: 'Twin Detroit Diesel — J&T Natural, 310 HP (naturally aspirated)' },
-      { label: 'Refit', value: 'Extensive rebuild and upgrades, 2004' },
-      { label: 'Horsepower', value: '310 HP each' },
-      { label: 'Hours', value: 'Port 3,300 / Starboard 3,800' },
-      { label: 'Transmissions', value: 'Twin Disc, 2:1 ratio' },
-      { label: 'Prop shafts', value: 'Stainless steel, 1¾" diameter' },
-      { label: 'Generator', value: 'Onan MDJE diesel, 7.5 kW, 4,000 hours' },
-    ],
-  },
-  {
-    group: 'Capacities & Systems',
-    rows: [
+      { label: 'Year / Make / Model', value: '2004/1972 Hatteras 42 Convertible' },
+      { label: 'Hull material', value: 'Hand-laid FRP, EPOXY' },
+      { label: 'Engines', value: 'Twin Detroit Diesel — J&T, 310 HP (Naturals)' },
       { label: 'Fuel', value: '400 gal (two 200 gal fiberglass tanks)' },
       { label: 'Fresh water', value: '150 gal' },
       { label: 'Holding tank', value: '125 gal' },
       { label: 'DC', value: '12 V (four 8D wet-cell batteries)' },
       { label: 'AC', value: 'Two 125 V / 30 A shore inlets' },
-      { label: 'Air conditioning', value: 'Two Cruisair reverse-cycle units (16K + 10K BTU)' },
+      { label: 'Air conditioning', value: 'Two 2014 Cruisair reverse-cycle units (16K + 10K BTU)' },
       { label: 'Heads', value: 'One Raritan electric, MSD Type III' },
-      { label: 'Electronics', value: 'Standard Horizon VHF, Garmin GPSmap 2010c, Furuno NavPilot, Furuno Navnet VX2 radar (new in box)' },
+      { label: 'Electronics', value: 'Sci-Tex 72M Radar with Chart Overlay, Horizon VHF integrated to GPS, Garmin GPSmap 2010c, Furuno NavPilot' },
     ],
   },
 ];

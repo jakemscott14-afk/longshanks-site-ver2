@@ -31,9 +31,11 @@ export function Specs() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: gi * 0.1 }}
             >
-              <h3 className="font-serif text-xl font-medium text-navy mb-4 pb-3 border-b border-brass/40">
-                {group.group}
-              </h3>
+              {group.group && (
+                <h3 className="font-serif text-xl font-medium text-navy mb-4 pb-3 border-b border-brass/40">
+                  {group.group}
+                </h3>
+              )}
               <table className="w-full">
                 <tbody>
                   {group.rows.map((row, ri) => (

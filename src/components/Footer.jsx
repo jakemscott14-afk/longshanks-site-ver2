@@ -18,7 +18,7 @@ export function Footer() {
           <div>
             <p className="font-serif text-xl font-medium tracking-[0.08em] mb-3">Longshanks</p>
             <p className="text-cream/60 text-sm leading-relaxed">
-              1972 Hatteras 42 Convertible<br />
+              2004/1972 Hatteras 42 Convertible<br />
               Hull #319 · {meta.location}
             </p>
           </div>

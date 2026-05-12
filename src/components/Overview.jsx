@@ -30,13 +30,13 @@ export function Overview() {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           >
             <p className="text-slate leading-relaxed mb-5">
-              Longshanks is a 1972 Hatteras 42 Convertible, hull #319, built in New Bern, North Carolina — during what many consider the golden era of American sportfishing yacht construction. Hatteras Yachts had not yet been absorbed into larger conglomerates, and the craftsmanship shows in every laminate, every frame, every fitting.
+              Longshanks is a Custom, 2004/1972 Hatteras 42 Convertible, hull #319, built in New Bern, North Carolina — during what many consider the golden era of American sportfishing yacht construction. Hatteras Yachts had not yet been absorbed into larger conglomerates, and the craftsmanship shows in every laminate, every frame, every fitting. Currently located in Charleston, South Carolina.
             </p>
             <p className="text-slate leading-relaxed mb-5">
-              In 2004 she was extensively rebuilt and upgraded — a top-to-bottom refit that included repowering with Detroit Diesel J&T Naturals at 310 HP each, system overhauls, and a number of thoughtful custom modifications. The classic Jimmys are the stuff of legend: simple, rebuildable, and nearly indestructible with proper care. At 3,300 and 3,800 hours respectively, they are well within a normal working life for this engine family.
+              In 2004 she was extensively rebuilt and upgraded — a top-to-bottom refit that included repowering with Detroit Diesel J&T Naturals at 310 HP each, system overhauls, and a number of thoughtful custom modifications. The twin Detroit Diesel 6-71N's — are the stuff of legend: simple, rebuildable, and nearly indestructible with proper care. At 3,300 and 3,800 hours respectively, they are well within a normal working life for this engine family.
             </p>
             <p className="text-slate leading-relaxed">
-              Currently berthed in Beaufort, South Carolina, Longshanks is ready for inspection and sea trial. A full independent survey was completed August 2024 and is available without restriction to qualified buyers.
+              Currently berthed in Charleston, South Carolina, Longshanks is ready for inspection and sea trial. A full independent survey was completed August 2024 and is available without restriction to qualified buyers.
             </p>
           </motion.div>
 

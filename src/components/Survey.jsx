@@ -1,10 +1,51 @@
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
-import { FileText, Download } from 'lucide-react';
 import { SectionDivider } from './ui/SectionDivider';
-import { Button } from './ui/Button';
-import { survey } from '../data/listing';
 
 export function Survey() {
+  const [submitted, setSubmitted] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      const formData = new URLSearchParams();
+      formData.append('form-name', 'survey-request');
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData.toString(),
+      });
+
+      if (response.ok) {
+        const link = document.createElement('a');
+        link.href = '/Survey_Report_for_LONGSHANKS.pdf';
+        link.download = 'Survey_Report_for_LONGSHANKS.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setSubmitted(true);
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again.');
+    }
+  };
+
+  const inputClass =
+    'w-full border border-mist bg-bone text-navy text-sm px-4 py-3 outline-none focus:border-brass transition-colors placeholder:text-slate/50 rounded-sm';
+  const labelClass = 'block text-xs font-medium text-slate tracking-wide uppercase mb-1.5';
+  const errorClass = 'text-red-500 text-xs mt-1';
+
   return (
     <section id="survey" className="bg-cream py-20">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -20,25 +61,12 @@ export function Survey() {
             Documentation
           </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium text-navy mb-6">
-            Independent marine survey
+            Get the survey report
           </h2>
-          <p className="text-slate leading-relaxed max-w-2xl mx-auto mb-8">
-            {survey.description}
+          <p className="text-slate leading-relaxed max-w-2xl mx-auto">
+            An independent condition and value survey was completed in August 2024 by Ronald E. Varg, SAMS AMS.
+            The full report is available to qualified buyers. Provide your email and phone and we'll send the PDF immediately.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <a href={survey.pdfPath} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="gap-2">
-                <FileText size={16} />
-                View survey (PDF)
-              </Button>
-            </a>
-            <a href={survey.pdfPath} download>
-              <Button variant="primary" className="gap-2">
-                <Download size={16} />
-                Download survey
-              </Button>
-            </a>
-          </div>
         </motion.div>
 
         <motion.div
@@ -46,14 +74,62 @@ export function Survey() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.15 }}
-          className="border border-mist"
+          className="max-w-lg mx-auto"
         >
-          <iframe
-            src={survey.pdfPath}
-            title="Longshanks Marine Survey Report"
-            className="w-full"
-            style={{ height: '700px' }}
-          />
+          {submitted ? (
+            <div className="flex items-center justify-center py-16 px-8 border border-mist bg-bone text-center">
+              <div>
+                <p className="font-serif text-xl font-medium text-navy mb-2">Survey on its way</p>
+                <p className="text-slate text-sm">Thanks — the survey is downloading now. We'll be in touch shortly.</p>
+              </div>
+            </div>
+          ) : (
+            <form
+              name="survey-request"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onSubmit={handleSubmit(onSubmit)}
+              className="space-y-5 border border-mist bg-bone p-8"
+            >
+              <input type="hidden" name="form-name" value="survey-request" />
+              <p hidden>
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
+
+              <div>
+                <label className={labelClass}>Email *</label>
+                <input
+                  {...register('email', {
+                    required: 'Email is required',
+                    pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: 'Invalid email' },
+                  })}
+                  type="email"
+                  placeholder="you@example.com"
+                  className={inputClass}
+                />
+                {errors.email && <p className={errorClass}>{errors.email.message}</p>}
+              </div>
+
+              <div>
+                <label className={labelClass}>Phone *</label>
+                <input
+                  {...register('phone', { required: 'Phone is required' })}
+                  type="tel"
+                  placeholder="(843) 555-0100"
+                  className={inputClass}
+                />
+                {errors.phone && <p className={errorClass}>{errors.phone.message}</p>}
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-brass text-navy text-sm font-medium py-3.5 hover:bg-brass-dark transition-colors rounded-sm cursor-pointer"
+              >
+                Send me the survey
+              </button>
+            </form>
+          )}
         </motion.div>
       </div>
     </section>
