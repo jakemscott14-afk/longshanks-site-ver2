@@ -110,7 +110,7 @@ export const survey = {
   surveyorName: 'Ronald E. Varg, SAMS AMS',
   firm: 'Boatworthy Marine Services',
   date: 'August 20, 2024',
-  pdfPath: '/Survey_Report_for_LONGSHANKS.pdf',
+  pdfPath: '/docs/longshanks-survey-report.pdf',
   pullQuote: 'well appointed, well maintained, and well constructed vessel',
   pullQuoteAttribution: 'Ronald E. Varg, SAMS AMS — August 2024',
   description:

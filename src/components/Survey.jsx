@@ -27,8 +27,9 @@ export function Survey() {
 
       if (response.ok) {
         const link = document.createElement('a');
-        link.href = '/Survey_Report_for_LONGSHANKS.pdf';
-        link.download = 'Survey_Report_for_LONGSHANKS.pdf';
+        link.href = '/docs/longshanks-survey-report.pdf';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -126,7 +127,7 @@ export function Survey() {
                 type="submit"
                 className="w-full bg-brass text-navy text-sm font-medium py-3.5 hover:bg-brass-dark transition-colors rounded-sm cursor-pointer"
               >
-                Send me the survey
+                View Survey Report
               </button>
             </form>
           )}
