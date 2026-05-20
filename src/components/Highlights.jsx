@@ -40,7 +40,7 @@ export function Highlights() {
                 <div className="text-brass mb-4">
                   {Icon && <Icon size={22} strokeWidth={1.5} />}
                 </div>
-                <h3 className="font-serif text-lg font-medium text-navy mb-2">{item.title}</h3>
+                <h3 className="font-serif text-lg font-bold text-navy mb-2">{item.title}</h3>
                 <p className="text-slate text-sm leading-relaxed">{item.body}</p>
               </motion.div>
             );

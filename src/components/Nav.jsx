@@ -26,7 +26,7 @@ export function Nav() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-        <a href="#hero" className="font-serif text-lg font-medium tracking-[0.12em] text-white uppercase">
+        <a href="#hero" className="font-serif text-xl font-medium tracking-[0.12em] text-white uppercase">
           Longshanks
         </a>
 
@@ -36,7 +36,7 @@ export function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="text-white/80 hover:text-white text-sm font-medium transition-colors"
+              className="text-white/80 hover:text-white text-base font-medium transition-colors"
             >
               {l.label}
             </a>
@@ -68,7 +68,7 @@ export function Nav() {
               key={l.href}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="text-white/80 hover:text-white text-sm font-medium py-1 border-b border-white/10"
+              className="text-white/80 hover:text-white text-base font-medium py-1 border-b border-white/10"
             >
               {l.label}
             </a>

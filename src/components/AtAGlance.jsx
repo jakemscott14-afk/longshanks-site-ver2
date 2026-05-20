@@ -17,7 +17,7 @@ export function AtAGlance() {
           <p className="text-brass text-xs font-medium tracking-[0.2em] uppercase text-center mb-3">
             At a glance
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-medium text-navy text-center mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-navy text-center mb-8">
             The numbers
           </h2>
         </motion.div>

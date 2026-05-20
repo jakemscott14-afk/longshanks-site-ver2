@@ -57,7 +57,7 @@ export function Hero() {
               <Button variant="ghost">Get the survey</Button>
             </a>
             <a
-              href="https://knot10.com/profile/keith-maresca/"
+              href="https://knot10.com/profile/captain-kyle-benvenuto"
               target="_blank"
               rel="noopener noreferrer"
             >
