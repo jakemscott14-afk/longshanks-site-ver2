@@ -9,24 +9,11 @@ export function Hero() {
       id="hero"
       className="relative h-screen min-h-[600px] flex items-end overflow-hidden"
     >
-      {/* Background video */}
-      <video
-        ref={(el) => { if (el) el.playbackRate = 0.3; }}
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        poster="/images/hero-poster.jpg"
-      >
-        <source src="/images/hero.mp4" type="video/mp4" />
-        {/* Fallback for browsers that don't support video */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/hero.jpg')" }}
-        />
-      </video>
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/hero-poster.jpg')" }}
+      />
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-linear-to-t from-navy-deep/90 via-navy-deep/30 to-transparent" />
 
@@ -53,15 +40,12 @@ export function Hero() {
             <a href="#overview">
               <Button variant="primary">View details</Button>
             </a>
-            <a href="#survey">
-              <Button variant="ghost">Get the survey</Button>
-            </a>
             <a
               href="https://knot10.com/profile/captain-kyle-benvenuto"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="ghost">Contact broker</Button>
+              <Button variant="ghost">For more Information</Button>
             </a>
           </div>
         </motion.div>

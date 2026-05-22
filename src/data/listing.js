@@ -102,7 +102,7 @@ export const customMod = {
 export const broker = {
   brokerage: 'Knot 10 Yacht Sales',
   profileUrl: 'https://knot10.com/profile/captain-kyle-benvenuto',
-  buttonLabel: 'Contact the broker',
+  buttonLabel: 'For more Information',
   blurb: 'Longshanks is represented by Kyle Benvenuto at Knot 10 Yacht Sales. Reach out through his profile for technical questions, sea trials, and coordination with your marine surveyor.',
 };
 

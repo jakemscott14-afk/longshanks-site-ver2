@@ -19,7 +19,7 @@ export function Broker() {
             Get in touch
           </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium text-navy">
-            Contact the broker
+            Get more information
           </h2>
         </motion.div>
 
@@ -35,7 +35,7 @@ export function Broker() {
               {broker.brokerage}
             </p>
             <h3 className="font-serif text-2xl font-medium text-navy mb-4">
-              Speak with the listing broker
+              Speak with Kyle Benvenuto
             </h3>
             <p className="text-slate text-sm leading-relaxed mb-8">
               {broker.blurb}
